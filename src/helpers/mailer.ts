@@ -19,9 +19,9 @@ export const sendEmail = async({ email, emailType, userId }:any) => {
             }) 
         }
 
-        const verifyEmail = `<p> Click <a href="${process.env.DOMAIN}/verifyemail?token=${hashedToken}"></a> to ${emailType === "VERIFY" ? 'verify you email address' : 'Reset your password'} or copy and paste the below url in your browser. <br/> </p>${process.env.DOMAIN}/verifyemail?token=${hashedToken} `
+        const verifyEmail = `<p> Click <a href="${process.env.DOMAIN}/verifyemail?token=${hashedToken}">here</a> to ${emailType === "VERIFY" ? 'verify you email address' : 'Reset your password'} or copy and paste the below url in your browser. <br/> </p>${process.env.DOMAIN}/verifyemail?token=${hashedToken} `
 
-        const resetPassword =`<p> Click <a href="${process.env.DOMAIN}/resetpassword?token=${hashedToken}"></a> to ${emailType === "VERIFY" ? 'verify you email address' : 'Reset your password'} or copy and paste the below url in your browser. <br/> </p>${process.env.DOMAIN}/resetpassword?token=${hashedToken} `
+        const resetPassword =`<p> Click <a href="${process.env.DOMAIN}/resetpassword?token=${hashedToken}">here</a> to ${emailType === "VERIFY" ? 'verify you email address' : 'Reset your password'} or copy and paste the below url in your browser. <br/> </p>${process.env.DOMAIN}/resetpassword?token=${hashedToken} `
 
         const transport = nodemailer.createTransport({
             host: "sandbox.smtp.mailtrap.io",
