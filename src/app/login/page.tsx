@@ -64,7 +64,7 @@ export default function SignupPage() {
      <button onClick={onLogin} className='bg-green-400 mb-10 px-8 py-2 rounded-md'>
       {buttonDisable ? "can't Login" : "Login"}
      </button>
-     <Link className="text-blue-500 hover:text-blue-700" href={'/login'}>Visit to signup page</Link>
+     <Link className="text-blue-500 hover:text-blue-700" href={'/signup'}>Visit to signup page</Link>
      </div>
      </div>
     
